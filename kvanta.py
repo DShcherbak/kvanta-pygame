@@ -10,7 +10,7 @@ _brush = None
 _pen   = None 
 _pen_width = None 
 
-def start_drawing(size=(1000, 1000), bg="white", title="My Window"):
+def start_drawing(size=(1000, 1000), bg="white", title="Kvanta"):
     global _screen, _bg, _clock, _brush, _pen, _pen_width
     pygame.init()
     _screen = pygame.display.set_mode(size)
@@ -67,7 +67,7 @@ def clear():
 def draw_frame():
     _require_screen()
     pygame.display.flip()
-    _clock.tick(0.25)
+    _clock.tick(60)
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             pygame.quit()
